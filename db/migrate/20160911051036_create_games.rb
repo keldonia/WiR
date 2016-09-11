@@ -77,9 +77,12 @@ class CreateGames < ActiveRecord::Migration
       t.float :currency_value
       t.string :currency_symbol
       t.string :currency_name
-      t.integer :player_id
-      t.integer :sub_gm_id
-      t.integer :gm_id
+      t.string :player_id  # maps to uid
+      t.string :sub_gm_id  # maps to uid
+      t.string :gm_id      # maps to uid
+      t.boolean :orders_received
+      t.
+      t.integer :global_economic_condition
 
       t.timestamps null: false
     end

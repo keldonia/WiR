@@ -80,5 +80,8 @@ class CreateStartData < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :start_data, [:year, :country_tag]
+    add_index :start_data, :year
   end
 end
